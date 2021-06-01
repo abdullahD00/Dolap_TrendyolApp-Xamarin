@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Dolap.MainPage"
+             BackgroundImageSource="girisekran.png">
+
+
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Button x:Name="AtlaButon" 
+                Text="ATLA" 
+                TextColor="White"
+                FontSize="Medium"
+                BackgroundColor="LightSeaGreen"
+                VerticalOptions="Start" 
+                HorizontalOptions="End" 
+                CharacterSpacing="0.1"
+                Clicked="AtlaButon_Clicked"
+                HeightRequest="60"
+                WidthRequest="75" />
+        
+       
+            <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="EndAndExpand" >
+                    <ImageButton x:Name="TrendyolilegirisyapButon"
+                                 Source="Trendyolilegirisyap.png" 
+                                 Aspect="AspectFill"
+                                 HorizontalOptions="End"
+                                 VerticalOptions="End"
+                                  WidthRequest="280" 
+                                 HeightRequest="45" 
+                                 Clicked="TrendyolilegirisyapButon_Clicked"/>
+                    <ImageButton x:Name="FacebookilegirisyapButon" 
+                                 Source="Facebookilegirisyap.png"  
+                                 Aspect="AspectFill" 
+                                 HorizontalOptions="End"
+                                 VerticalOptions="End" 
+                                 WidthRequest="280"
+                                 HeightRequest="45" 
+                                 Clicked="FacebookilegirisyapButon_Clicked"/>
+
+            </StackLayout>
+
+
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Button x:Name="GirisyapButon"
+                    Text="GİRİŞ YAP"   
+                    BackgroundColor="LightSeaGreen"
+                    HorizontalOptions="Center"
+                    WidthRequest="100"
+                    HeightRequest="50" 
+                    Clicked="GirisyapButon_Clicked" />
+            <Button x:Name="UyeolButon" 
+                    Text="ÜYE OL" 
+                    BackgroundColor="White" 
+                    TextColor="LightSeaGreen" 
+                    HorizontalOptions="Center"
+                    WidthRequest="100" 
+                    HeightRequest="38" 
+                    Clicked="UyeolButon_Clicked"/>
+           </StackLayout>
+
+        
+        
+    </StackLayout>
+
+   
+    
+
+</ContentPage>
+
+
+
+
+
+
+
+
+
+
+

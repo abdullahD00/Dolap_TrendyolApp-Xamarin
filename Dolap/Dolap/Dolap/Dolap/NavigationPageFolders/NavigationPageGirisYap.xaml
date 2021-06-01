@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Dolap.NavigationPageFolders.NavigationPageGirisYap"
+             xmlns:local="clr-namespace:Dolap.EntryBehaviors"
+             BackgroundColor="White"
+             xmlns:vm="clr-namespace:Dolap.ViewModels">
+
+    <ContentPage.BindingContext>
+        <vm:GirisYapViewModels></vm:GirisYapViewModels>
+    </ContentPage.BindingContext>
+    
+    
+    
+    <ContentPage.Content>
+        <ScrollView>
+      <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Vertical" HeightRequest="500" >
+            <Label Text="ÜYE GİRİŞİ" 
+                   TextColor="LightSeaGreen" 
+                   HorizontalOptions="CenterAndExpand" 
+                   FontSize="Title" 
+                   VerticalOptions="Start"/>
+            <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="EndAndExpand">
+                <ImageButton x:Name="TrendyolileGirisyap" 
+                             Source="Trendyolilegirisyap.png"
+                             Aspect="AspectFill"
+                             HorizontalOptions="Center"
+                         VerticalOptions="End" 
+                             HeightRequest="45" WidthRequest="270"
+                             Clicked="TrendyolileGirisyap_Clicked"/>
+                <ImageButton x:Name="Facebookilegirisyap" 
+                             Source="Facebookilegirisyap.png" 
+                             Aspect="AspectFill" 
+                             HorizontalOptions="Center"
+                             VerticalOptions="End"
+                             HeightRequest="45" 
+                             WidthRequest="270" 
+                             Clicked="Facebookilegirisyap_Clicked" />
+            </StackLayout>
+
+            <Label Text="VEYA" 
+                   TextColor="Black"
+                   HorizontalOptions="CenterAndExpand" 
+                   VerticalOptions="CenterAndExpand"
+                   FontSize="Small" />
+
+            <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+                <Entry x:Name="entryKullanıcıAdıVeyaeposta" 
+                       Placeholder="Kullanıcı Adı veya E-posta" 
+                       TextTransform="Lowercase" 
+                       Text="{Binding Username}"
+                       HorizontalOptions="End" 
+                       VerticalOptions="Center"
+                       WidthRequest="350"/>
+
+                    
+              
+                <Entry x:Name="entrySifre"
+                       Placeholder="Şifre" 
+                       IsPassword="True"
+                       Text="{Binding Password}"
+                       HorizontalOptions="End" 
+                       VerticalOptions="Center"
+                       WidthRequest="350"/>
+
+
+                <Button x:Name="Girisyapbuton" 
+                        Text="GİRİŞ YAP" 
+                        TextColor="White" 
+                        BackgroundColor="LightSeaGreen"
+                        FontSize="Medium"
+                        Clicked="Girisyapbuton_Clicked"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" 
+                    FontAttributes="Bold" 
+                       
+                        WidthRequest="270"
+                        Command="{Binding LoginCommand}"/>
+                    <Label x:Name="status"  TextColor="LightSkyBlue" 
+                           Text="{Binding LoginStatus}" 
+                           FontSize="Medium" 
+                           FontAttributes="Bold" 
+                           HorizontalOptions="Center"></Label>
+
+                </StackLayout>
+          
+          
+              
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Dolap.Views.AKSESUARMENUKATEGORİ"
+             BackgroundImageSource="aksesuarbackgrandimage.jpg"
+            >
+    <ContentPage.Content>
+        <AbsoluteLayout>
+
+
+            <Button x:Name="gozluk" 
+                Text="GÖZLÜK"
+                TextColor="Black"
+                BackgroundColor="LightSeaGreen"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                Clicked="gozluk_Clicked"
+                    CornerRadius="15"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    AbsoluteLayout.LayoutBounds="0.5,0.2,300,50"/>
+
+
+            <Button x:Name="saat" 
+                Text="SAAT"
+                TextColor="Black"
+                BackgroundColor="LightSeaGreen"
+                HorizontalOptions="Center"
+               VerticalOptions="End"
+                Clicked="saat_Clicked"
+                CornerRadius="15"
+               AbsoluteLayout.LayoutFlags="PositionProportional"
+               AbsoluteLayout.LayoutBounds="0.5,0.35,300,50"
+                    />
+
+
+
+            <Button x:Name="takı" 
+                Text="TAKI"
+                TextColor="Black"
+               BackgroundColor="LightSeaGreen"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                CornerRadius="15"
+                Clicked="takı_Clicked"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                AbsoluteLayout.LayoutBounds="0.5,0.5,300,50"/>
+
+            <Button x:Name="kemer" 
+                Text="KEMER"
+                TextColor="Black"
+                BackgroundColor="LightSeaGreen"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                CornerRadius="15"
+                Clicked="kemer_Clicked"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+               AbsoluteLayout.LayoutBounds="0.5,0.65,300,50"/>
+
+            <Button x:Name="sapka" 
+                Text="ŞAPKA"
+                TextColor="Black"
+                BackgroundColor="LightSeaGreen"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                CornerRadius="15"
+                Clicked="sapka_Clicked"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+               AbsoluteLayout.LayoutBounds="0.5,0.8,300,50"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

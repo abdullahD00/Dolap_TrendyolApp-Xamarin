@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Dolap.Views.DetailedPage"
+             Title="{Binding AnaSayfaRandomUrunler1.Isim}"
+             xmlns:vm="clr-namespace:Dolap.ViewModels">
+
+   
+    
+    <ContentPage.Content>
+      <AbsoluteLayout  BackgroundColor="LightSeaGreen">
+          
+          
+          
+            <Image Source="{Binding AnaSayfaRandomUrunler1.ImageSource}" Aspect="AspectFill" 
+                   AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.38,100,200"/>
+                 
+                 
+            <Label Text="{Binding AnaSayfaRandomUrunler1.Fiyat}" TextColor="Black" FontSize="Body" VerticalTextAlignment="Center"
+                   AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.4,0.7,50,50" />
+            <Label Text="TUTAR:" TextColor="Black" FontSize="Body" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.22,0.688"/>
+            <Label Text="{Binding AnaSayfaRandomUrunler1.Isim}" TextColor="Black" FontSize="Medium" VerticalTextAlignment="Center"
+                   AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.3,0.1"/>
+
+            <Label Text="₺"  TextColor="Black" FontSize="Body" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.44,0.688"/>
+            <Button x:Name="sepeteeklebutton" Text="SEPETE EKLE" BackgroundColor="Wheat" HorizontalOptions="Center" VerticalOptions="End"
+                    AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,1" HeightRequest="50" WidthRequest="420"  
+                    Command="{Binding Sptekle}">
+                <Button.BindingContext>
+                    <vm:SepeteEkleViewModel></vm:SepeteEkleViewModel>
+                </Button.BindingContext>
+            </Button>
+
+        </AbsoluteLayout>
+  </ContentPage.Content>
+</ContentPage>

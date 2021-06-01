@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Dolap.Views.Hesabım" BackgroundColor="FloralWhite">
+    <ContentPage.Content>
+      <AbsoluteLayout>
+            <Button  Text="HAKKINDA" BackgroundColor="LightSeaGreen" IsEnabled="False"
+                     CornerRadius="10" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.4" TextColor="Black"
+                     HeightRequest="50" WidthRequest="150"/>
+            <Button Text="HESABIM" BackgroundColor="LightSeaGreen" IsEnabled="False"
+                    CornerRadius="10" HorizontalOptions="Center" VerticalOptions="Center" AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.5,0.6"
+                    TextColor="Black" HeightRequest="50" WidthRequest="150"/>
+        </AbsoluteLayout>
+  </ContentPage.Content>
+</ContentPage>

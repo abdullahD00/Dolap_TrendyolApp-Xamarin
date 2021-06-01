@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Dolap.NavigationPageFolders.NavigationPageUyeOl"
+             xmlns:local="clr-namespace:Dolap.EntryBehaviors"
+             BackgroundColor="White"
+             xmlns:vm="clr-namespace:Dolap.ViewModels">
+
+    <ContentPage.BindingContext>
+        <vm:SignUpViewModels></vm:SignUpViewModels>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Orientation="Vertical" HeightRequest="500" >
+            
+            <Label Text="ÜYELİK FORMU"
+                   TextColor="LightSeaGreen"
+                   HorizontalOptions="Center" 
+                   FontSize="Title" 
+                   VerticalOptions="StartAndExpand"/>
+            <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="EndAndExpand">
+
+                <ImageButton x:Name="TrendyolileGirisyap"
+                             Source="Trendyolileuyeol.png" 
+                             Aspect="AspectFill"
+                             HorizontalOptions="Center"
+                         VerticalOptions="End" 
+                             HeightRequest="45"
+                             WidthRequest="270" 
+                             Clicked="TrendyolileGirisyap_Clicked"/>
+                <ImageButton x:Name="Facebookilegirisyap" 
+                             Source="Facebookileuyeol.png" 
+                             Aspect="AspectFill" 
+                             HorizontalOptions="Center"
+                         VerticalOptions="End"
+                             HeightRequest="45"
+                             WidthRequest="270" 
+                             Clicked="Facebookilegirisyap_Clicked" />
+            </StackLayout>
+
+            <Label Text="VEYA" 
+                   TextColor="Black"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   FontSize="Small" />
+
+            <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+                <Entry x:Name="entrykullanıcıadı"
+                       Text="{Binding Name}"
+                       Placeholder="Kullanıcı Adı" 
+                       TextTransform="Lowercase"  
+                       HorizontalOptions="End" 
+                       VerticalOptions="Center" 
+                       WidthRequest="350"/>
+
+
+
+                <Entry x:Name="entryeposta"
+                       Placeholder="E-posta" 
+                       TextTransform="Lowercase"  
+                       HorizontalOptions="End"
+                       VerticalOptions="Center" 
+                       WidthRequest="350" >
+                    <Entry.Behaviors>
+                        <local:EmailBehaviors> </local:EmailBehaviors>
+                    </Entry.Behaviors>
+                </Entry>
+
+                <Entry x:Name="entrysifre" 
+                       Placeholder="Şifre" 
+                       Text="{Binding Password}"
+                       IsPassword="True" 
+                       HorizontalOptions="End"
+                       VerticalOptions="Center"
+                       WidthRequest="350">
+                    <Entry.Behaviors>
+                        <local:PasswordBehaviors> </local:PasswordBehaviors>
+                    </Entry.Behaviors>
+                </Entry>
+                <RadioButton x:Name="üyelikradiobutton" 
+                             Content="Üyelik koşulları ve kişisel verilerin korunması sözleşmelerini kabul ediyorum."/>
+                <RadioButton x:Name="kampanyaradiobutton"
+                             Content="İndirim ve kampanyalardan anında haberdar olabilmek için elektronik ileti almak istiyorum. "/>
+
+                <Button x:Name="Uyeolbuton"
+                        Text="ÜYE OL" 
+                        TextColor="White" 
+                        BackgroundColor="LightSeaGreen" 
+                        FontSize="Medium" 
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" 
+                    FontAttributes="Bold"  
+                        Clicked="Uyeolbuton_Clicked"
+                        WidthRequest="270"
+                        Command="{Binding SingUpCommand}"/>
+
+            
+
+        </StackLayout>
+
+
+
+
+
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

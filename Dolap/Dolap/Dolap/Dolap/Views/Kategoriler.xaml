@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Dolap.Views.Kategoriler"
+             xmlns:kategori="clr-namespace:Dolap.Views">
+
+
+    <MasterDetailPage.BindingContext>
+        <kategori:MasterPageItem></kategori:MasterPageItem>
+    </MasterDetailPage.BindingContext>    
+    
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="MENU" IconImageSource="DolapLogo.png">
+
+            <ListView x:Name="menulist"  ItemSelected="ListView_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="{Binding Icon}" WidthRequest="60" HeightRequest="60" Aspect="AspectFit"></Image>
+                                <Label Text="{Binding title}" FontSize="25" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start"
+                                               HorizontalTextAlignment="Center"
+                                               ></Label>
+                                <Label Text="{Binding Detail}" VerticalOptions="Center" HorizontalOptions="End" HorizontalTextAlignment="End"
+                                               FontAttributes="Italic" FontSize="12" VerticalTextAlignment="Center"
+                                               ></Label>
+                            </StackLayout>
+                        </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+          
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <ContentPage>
+            <StackLayout BackgroundColor="LightSeaGreen">
+                <Button Text="{ Binding kategoriisim}" 
+                        IsEnabled="False" 
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        CornerRadius="15"/>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+    
+</MasterDetailPage>

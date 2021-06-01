@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Dolap.Views.ERKEKMENUKATEGORİ"
+             BackgroundImageSource="erkekbackgroundiamge.jpg">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+          
+          
+            <Button x:Name="erkekustgiyim" 
+                Text="ERKEK ÜST GİYİM"
+                TextColor="Black"
+                BackgroundColor="LightSeaGreen"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                Clicked="erkekustgiyim_Clicked"
+                    CornerRadius="15"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    AbsoluteLayout.LayoutBounds="0.5,0.2"
+                    WidthRequest="150"/>
+          
+          
+            <Button x:Name="erkekaltgiyim" 
+                Text="ERKEK ALT GİYİM"
+                TextColor="Black"
+                BackgroundColor="LightSeaGreen"
+                HorizontalOptions="Center"
+               VerticalOptions="End"
+                Clicked="erkekaltgiyim_Clicked"
+                CornerRadius="15"
+               AbsoluteLayout.LayoutFlags="PositionProportional"
+               AbsoluteLayout.LayoutBounds="0.5,0.35"
+                    WidthRequest="150"
+                    />    
+                   
+
+
+            <Button x:Name="erkekdısgiyim" 
+                Text="ERKEK DIŞ GİYİM"
+                TextColor="Black"
+               BackgroundColor="LightSeaGreen"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                CornerRadius="15"
+                Clicked="erkekdısgiyim_Clicked"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                AbsoluteLayout.LayoutBounds="0.5,0.5"
+                    WidthRequest="150"/>
+
+            <Button x:Name="erkekplajgiyim" 
+                Text="ERKEK PLAJ GİYİM"
+                TextColor="Black"
+                BackgroundColor="LightSeaGreen"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                CornerRadius="15"
+                Clicked="erkekplajgiyim_Clicked"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+               AbsoluteLayout.LayoutBounds="0.5,0.65"
+                    WidthRequest="150"/>
+
+            <Button x:Name="erkekevgiyim" 
+                Text="ERKEK EV GİYİM"
+                TextColor="Black"
+                BackgroundColor="LightSeaGreen"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                CornerRadius="15"
+                Clicked="erkekevgiyim_Clicked"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+               AbsoluteLayout.LayoutBounds="0.5,0.8"
+                    WidthRequest="150"/>
+        </AbsoluteLayout>
+  </ContentPage.Content>
+</ContentPage>

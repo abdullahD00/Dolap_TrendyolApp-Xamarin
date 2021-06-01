@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Dolap.Views.ÇOCUKBEBEKMENUKATEGORİ"
+            BackgroundImageSource="cocukbebekbackgroundimage.jpg" >
+    <ContentPage.Content>
+        <AbsoluteLayout>
+
+
+            <Button x:Name="bebekustgiyim" 
+                Text="BEBEK,ÇOCUK ÜST GİYİM"
+                TextColor="Black"
+                BackgroundColor="LightSeaGreen"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                Clicked="bebekustgiyim_Clicked"
+                    CornerRadius="15"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    AbsoluteLayout.LayoutBounds="0.5,0.2"
+                    WidthRequest="150"/>
+
+
+            <Button x:Name="bebelaltgiyim" 
+                Text="BEBEK,ÇOCUK ALT GİYİM"
+                TextColor="Black"
+                BackgroundColor="LightSeaGreen"
+                HorizontalOptions="Center"
+               VerticalOptions="End"
+                Clicked="bebelaltgiyim_Clicked"
+                CornerRadius="15"
+               AbsoluteLayout.LayoutFlags="PositionProportional"
+               AbsoluteLayout.LayoutBounds="0.5,0.35"
+                    WidthRequest="150"
+                    />
+
+
+
+            <Button x:Name="bebekdısgiyim" 
+                Text="BEBEK,ÇOCUK DIŞ GİYİM"
+                TextColor="Black"
+               BackgroundColor="LightSeaGreen"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                CornerRadius="15"
+               Clicked="bebekdısgiyim_Clicked"
+                AbsoluteLayout.LayoutFlags="PositionProportional"
+                AbsoluteLayout.LayoutBounds="0.5,0.5"
+                    WidthRequest="150"/>
+
+            <Button x:Name="bebekplajgiyim" 
+                Text="BEBEK,ÇOCUK PLAJ GİYİM"
+                TextColor="Black"
+                BackgroundColor="LightSeaGreen"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                CornerRadius="15"
+             Clicked="bebekplajgiyim_Clicked"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+               AbsoluteLayout.LayoutBounds="0.5,0.65"
+                    WidthRequest="150"/>
+
+            <Button x:Name="bebekevgiyim" 
+                Text="BEBEK,ÇOCUK EV GİYİM"
+                TextColor="Black"
+                BackgroundColor="LightSeaGreen"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                CornerRadius="15"
+               Clicked="bebekevgiyim_Clicked"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+               AbsoluteLayout.LayoutBounds="0.5,0.8"
+                    WidthRequest="150"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

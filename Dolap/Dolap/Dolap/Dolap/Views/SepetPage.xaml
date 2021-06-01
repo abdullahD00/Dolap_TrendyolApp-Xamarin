@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Dolap.Views.SepetPage"
+             xmlns:vm="clr-namespace:Dolap.ViewModels">
+            
+
+    <ContentPage.BindingContext>
+        <vm:SepeteEkleViewModel></vm:SepeteEkleViewModel>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        
+      <StackLayout>
+            <CollectionView  ItemsSource="{Binding AnaSayfaRandomUrunlersepet}" >
+
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Span="1" Orientation="Vertical"></GridItemsLayout>
+                </CollectionView.ItemsLayout>
+                
+                <CollectionView.ItemTemplate>
+                    
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="200"/>
+                                        <RowDefinition Height="100"/>
+                                        <RowDefinition Height="50"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Image Source="{Binding ImageSource}" Aspect="AspectFill"   Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3"/>
+                                    <Label Text="{Binding Fiyat}" TextColor="Black" FontSize="Body" FontAttributes="Bold" Grid.Row="1" Grid.Column="1"/>
+                                    <Label Text="{Binding Isim}" TextColor="Black" FontSize="Medium" FontAttributes="Italic" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2"/>
+
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            
+                <Button Text="ÖDEME YAP" x:Name="ödemeyap" Clicked="ödemeyap_Clicked"></Button>
+            
+            </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
