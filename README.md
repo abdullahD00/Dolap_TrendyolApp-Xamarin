@@ -1,0 +1,1 @@
+# Dolap_TrendyolApp-Xamarin
